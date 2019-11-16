@@ -4,7 +4,6 @@
   "description": "Input component",
   "author": "Asad Hazara",
   "homepage": "git-URL-HIER",
-  "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [

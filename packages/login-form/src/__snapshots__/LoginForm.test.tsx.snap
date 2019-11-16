@@ -2,9 +2,7 @@
 
 exports[`LoginForm should match snapshot and styles 1`] = `
 <div>
-  <div
-    class="makeStyles-root-1"
-  >
+  <div>
     <input
       id="name"
       label="Name"
@@ -13,9 +11,7 @@ exports[`LoginForm should match snapshot and styles 1`] = `
       id="password"
       label="Password"
     />
-    <div
-      class="makeStyles-wrapper-2"
-    >
+    <div>
       <button>
         Log in
       </button>
