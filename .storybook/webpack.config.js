@@ -1,5 +1,6 @@
 const path = require('path');
 const { lstatSync, readdirSync } = require('fs');
+const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
 
 const basePath = path.resolve(__dirname, '../', 'packages');
 const packages = readdirSync(basePath).filter((name) =>
@@ -8,9 +9,24 @@ const packages = readdirSync(basePath).filter((name) =>
 
 module.exports = async ({ config }) => {
   config.module.rules.push({
-    test: /\.(ts|tsx)$/,
-    loader: require.resolve('awesome-typescript-loader'),
+    test: /\.story\.mdx$/,
+    use: [
+      {
+        loader: '@mdx-js/loader',
+        options: {
+          compilers: [createCompiler({})],
+        },
+      },
+    ],
   });
+
+  config.module.rules.push({
+    test: /\.(ts|tsx)$/,
+    use: [
+      require.resolve('awesome-typescript-loader'),
+    ],
+  });
+
   config.resolve.extensions.push('.ts', '.tsx');
 
   Object.assign(config.resolve.alias, {
