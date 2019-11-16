@@ -1,0 +1,24 @@
+{
+  "name": "@taxi/input",
+  "version": "0.1.0",
+  "description": "Input component",
+  "author": "Asad Hazara",
+  "homepage": "git-URL-HIER",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:declaration": "tsc --project tsconfig.build.json",
+    "build:es": "BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+GIT_URL-HIER"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0"
+  }
+}
