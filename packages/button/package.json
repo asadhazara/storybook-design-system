@@ -1,9 +1,9 @@
 {
-  "name": "@taxi/login-form",
-  "version": "0.1.0",
-  "description": "Login Form component",
+  "name": "@taxi/button",
+  "version": "1.0.0",
+  "description": "Button component",
   "author": "Asad Hazara",
-  "homepage": "git-URL-HIER",
+  "homepage": "https://github.com/asadhazara/storybook-components-lerna",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -15,10 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+GIT_URL-HIER"
-  },
-  "dependencies": {
-    "@taxi/input": "^0.1.0"
+    "url": "git+https://github.com/asadhazara/storybook-components-lerna.git"
   },
   "peerDependencies": {
     "react": "^16.12.0"
