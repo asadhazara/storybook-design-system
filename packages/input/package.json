@@ -1,0 +1,25 @@
+{
+  "name": "@taxi/input",
+  "version": "1.0.2",
+  "description": "Input component",
+  "author": "Asad Hazara",
+  "homepage": "https://github.com/asadhazara/storybook-components-lerna",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:declaration": "tsc --project tsconfig.build.json",
+    "build:es": "BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asadhazara/storybook-components-lerna.git"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "styled-components": "^4.0.0",
+    "styled-system": "^5.0.0"
+  }
+}
