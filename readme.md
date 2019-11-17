@@ -84,18 +84,12 @@ export const allButtons = (): React.ReactNode => (
     <Button size="tiny" type="button">
       default | tiny
     </Button>
-    <br />
-    <br />
     <Button type="button" variant="primary">
       primary | normal
     </Button>
-    <br />
-    <br />
     <Button size="large" type="button" variant="danger">
       danger | large
     </Button>
-    <br />
-    <br />
     <Button size="large" type="button" variant="warning">
       warning | large
     </Button>
