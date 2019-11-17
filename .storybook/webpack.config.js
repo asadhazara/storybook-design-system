@@ -10,7 +10,15 @@ const packages = readdirSync(basePath).filter((name) =>
 module.exports = async ({ config }) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    loaders: ['awesome-typescript-loader', 'react-docgen-typescript-loader'],
+    use: [
+      {
+        loader: require.resolve('awesome-typescript-loader'),
+      },
+      // Optional
+      {
+        loader: require.resolve('react-docgen-typescript-loader'),
+      },
+    ],
   });
 
   config.resolve.extensions.push('.ts', '.tsx');

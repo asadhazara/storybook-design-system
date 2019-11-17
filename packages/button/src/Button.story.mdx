@@ -1,26 +1,55 @@
-import { Meta, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview, Props, Source } from '@storybook/addon-docs/blocks';
 import { Button } from './';
 
-<Meta title="Button/danger" component={Button} />
+<Meta title="Component|All Buttons" component={Button} />
 
-# Credit card
+# Button
 
-This component must use `inputmode="numeric"` in order to bring up the correct keyboard on mobile.
+This is line about this component. `Enjoy!`
 
 <Preview>
-  <Button variant="danger" type="button">
-    Hello
-  </Button>
-  <Button variant="primary" type="button">
-    Hello
-  </Button>
-  <Button variant="warning" type="button">
-    Hello
-  </Button>
+  <Story name="default">
+    <Button variant="default" type="button">
+      Button
+    </Button>
+  </Story>
+  <Story name="primary">
+    <Button variant="primary" type="button">
+      Button
+    </Button>
+  </Story>
+  <Story name="warning">
+    <Button variant="warning" type="button">
+      Button
+    </Button>
+  </Story>
+  <Story name="danger">
+    <Button variant="danger" type="button">
+      Button
+    </Button>
+  </Story>
 </Preview>
 
-```javascript
-<Button variant="warning" type="button">
-  Hello
-</Button>
+---
+
+<Props of={Button} />
+
+---
+
+---
+
+### Dit is nog een regel om te lezen.
+
+This is a guide on Markdown [Markdown][1].
+
+- One
+  - One.One
+  - One.Two
+- Two
+- Three
+
+```js
+<my-component>Instead of backticks hyphens are used to avoid slash escaping.</my-component>
 ```
+
+[1]: http://en.wikipedia.org/wiki/Markdown 'Markdown'

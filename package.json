@@ -23,6 +23,7 @@
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "storybook": "start-storybook -p 6006",
+    "build:docs": "build-storybook --docs",
     "test": "jest",
     "tsc": "tsc",
     "build:declarations": "lerna run --parallel 'build:declaration'"

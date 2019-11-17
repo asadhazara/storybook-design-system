@@ -1,8 +1,11 @@
-import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import React, { ButtonHTMLAttributes, DetailedHTMLProps, FC } from 'react';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
 type HTMLButtonProps = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+export interface ButtonProps extends Pick<HTMLButtonProps, 'type' | 'onClick'> {
+  variant?: 'default' | 'primary' | 'danger' | 'warning';
+}
 
 const defaultProps = {
   outline: 0,
@@ -54,7 +57,7 @@ const StyledButton = styled.button<{ variant?: string }>`
   })}
 `;
 
-export const Button: React.FC<Pick<HTMLButtonProps, 'type' | 'onClick'> & { variant?: string }> = (props) => {
+const Button: FC<ButtonProps> = (props) => {
   return <StyledButton {...props} />;
 };
 
@@ -62,3 +65,5 @@ Button.defaultProps = {
   type: 'button',
   variant: 'default',
 };
+
+export { Button };
