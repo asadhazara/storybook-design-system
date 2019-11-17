@@ -7,4 +7,11 @@ export default {
   component: Input,
 };
 
-export const AllFields = (): React.ReactNode => <Input type="text" />;
+export const AllFields = (): React.ReactNode => (
+  <>
+    <Input type="text" />
+    <br />
+    <br />
+    <Input type="text" sizeVariant="large" />
+  </>
+);

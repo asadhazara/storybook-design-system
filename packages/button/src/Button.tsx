@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { variant } from 'styled-system';
 
 type HTMLButtonProps = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
-export interface ButtonProps extends Pick<HTMLButtonProps, 'type' | 'onClick'> {
+interface ButtonProps extends Pick<HTMLButtonProps, 'type' | 'onClick'> {
   variant?: 'default' | 'primary' | 'danger' | 'warning';
-  size?: 'tiny' | 'normal' | 'large';
+  sizeVariant?: 'tiny' | 'normal' | 'large';
 }
 
 const defaultProps = {
@@ -23,7 +23,7 @@ const defaultProps = {
   },
 };
 
-const StyledButton = styled.button<{ variant?: string; size?: string }>`
+const StyledButton = styled.button<ButtonProps>`
   ${variant({
     variants: {
       default: {
@@ -57,7 +57,7 @@ const StyledButton = styled.button<{ variant?: string; size?: string }>`
   })}
 
   ${variant({
-    prop: 'size',
+    prop: 'sizeVariant',
     variants: {
       normal: {
         p: 2,
@@ -69,6 +69,7 @@ const StyledButton = styled.button<{ variant?: string; size?: string }>`
       },
       tiny: {
         p: 1,
+        fontSize: 0,
       },
     },
   })}
@@ -85,7 +86,7 @@ const Button: FC<ButtonProps> = (props) => {
 Button.defaultProps = {
   type: 'button',
   variant: 'default',
-  size: 'normal',
+  sizeVariant: 'normal',
 };
 
 export { Button };
