@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/asadhazara/storybook-components-lerna/compare/@taxi/button@1.0.2...@taxi/button@1.1.0) (2019-11-17)
+
+
+### Features
+
+* **@taxi/button:** added size variant of button component ([6ab15da](https://github.com/asadhazara/storybook-components-lerna/commit/6ab15da53e7d00f1c5891042082ee2d4130ead94))
+* **@taxi/button,@taxi/input:** added input component and allowed noImplicitAny in tsconfig ([a283e7a](https://github.com/asadhazara/storybook-components-lerna/commit/a283e7a3bf3b39f902f72a08710e6323bf812a83))
+
+
+
+
+
 ## 1.0.2 (2019-11-17)
 
 
