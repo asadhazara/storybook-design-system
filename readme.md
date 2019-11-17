@@ -26,5 +26,7 @@ yarn storybook
 
 ## Resources used in this project
 
+Want to learn more? Here are some more articles on the resources used in this project:
+
 - Storybook: [Docs](https://storybook.js.org/docs/basics/introduction/)
 - Lerna: [Docs](https://lerna.js.org/)
