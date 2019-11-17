@@ -19,6 +19,7 @@
     "lint": "run-p -c lint:*",
     "prerelease": "yarn build",
     "release": "lerna publish --conventional-commits --skip-npm",
+    "version": "lerna version --conventional-commits",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "storybook": "start-storybook -p 6006",
@@ -90,5 +91,6 @@
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
-  }
+  },
+  "version": "0.0.0"
 }
