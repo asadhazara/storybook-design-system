@@ -11,18 +11,23 @@ export default {
 
 export const allButtons = (): React.ReactNode => (
   <>
-    <Button type="button">Hello</Button>
-    &nbsp;
+    <Button size="tiny" type="button">
+      default | tiny
+    </Button>
+    <br />
+    <br />
     <Button type="button" variant="primary">
-      Hello
+      primary | normal
     </Button>
-    &nbsp;
-    <Button type="button" variant="danger">
-      Hello
+    <br />
+    <br />
+    <Button size="large" type="button" variant="danger">
+      danger | large
     </Button>
-    &nbsp;
-    <Button type="button" variant="warning">
-      Hello
+    <br />
+    <br />
+    <Button size="large" type="button" variant="warning">
+      warning | large
     </Button>
   </>
 );
@@ -32,16 +37,19 @@ export const defaultButton = (): React.ReactNode => (
     {text('Value', 'Button')}
   </Button>
 );
+
 export const primary = (): React.ReactNode => (
   <Button variant="primary" type="button" onClick={action('logIn clicked')}>
     {text('Value', 'Button')}
   </Button>
 );
+
 export const danger = (): React.ReactNode => (
   <Button variant="danger" type="button" onClick={action('logIn clicked')}>
     {text('Value', 'Button')}
   </Button>
 );
+
 export const warning = (): React.ReactNode => (
   <Button variant="warning" type="button" onClick={action('logIn clicked')}>
     {text('Value', 'Button')}

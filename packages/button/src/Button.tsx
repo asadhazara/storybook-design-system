@@ -5,11 +5,11 @@ import { variant } from 'styled-system';
 type HTMLButtonProps = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 export interface ButtonProps extends Pick<HTMLButtonProps, 'type' | 'onClick'> {
   variant?: 'default' | 'primary' | 'danger' | 'warning';
+  size?: 'tiny' | 'normal' | 'large';
 }
 
 const defaultProps = {
   outline: 0,
-  p: 2,
   borderRadius: 4,
   border: 'none',
   cursor: 'pointer',
@@ -23,7 +23,7 @@ const defaultProps = {
   },
 };
 
-const StyledButton = styled.button<{ variant?: string }>`
+const StyledButton = styled.button<{ variant?: string; size?: string }>`
   ${variant({
     variants: {
       default: {
@@ -55,6 +55,23 @@ const StyledButton = styled.button<{ variant?: string }>`
       },
     },
   })}
+
+  ${variant({
+    prop: 'size',
+    variants: {
+      normal: {
+        p: 2,
+        fontSize: 1,
+      },
+      large: {
+        p: 3,
+        fontSize: 2,
+      },
+      tiny: {
+        p: 1,
+      },
+    },
+  })}
 `;
 
 /**
@@ -68,6 +85,7 @@ const Button: FC<ButtonProps> = (props) => {
 Button.defaultProps = {
   type: 'button',
   variant: 'default',
+  size: 'normal',
 };
 
 export { Button };

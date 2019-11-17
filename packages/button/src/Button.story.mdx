@@ -1,4 +1,5 @@
 import { Meta, Story, Preview, Props, Source, Description } from '@storybook/addon-docs/blocks';
+import { text } from '@storybook/addon-knobs';
 import { Button } from './';
 
 <Meta title="Component|All Buttons" component={Button} />
@@ -11,8 +12,8 @@ This is line about this component. `Enjoy!`
 
 <Preview>
   <Story name="default">
-    <Button variant="default" type="button">
-      Button
+    <Button size="tiny" variant="default" type="button">
+      {text('Value', 'Button')}
     </Button>
   </Story>
   <Story name="primary">
@@ -21,12 +22,12 @@ This is line about this component. `Enjoy!`
     </Button>
   </Story>
   <Story name="warning">
-    <Button variant="warning" type="button">
+    <Button size="large" variant="warning" type="button">
       Button
     </Button>
   </Story>
   <Story name="danger">
-    <Button variant="danger" type="button">
+    <Button size="large" variant="danger" type="button">
       Button
     </Button>
   </Story>
