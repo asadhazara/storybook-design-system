@@ -24,7 +24,7 @@ yarn storybook
 
 ### Stories in MDX
 
-To add stories in markdown just add a `[component-name].story.mdx` somewhere in package/\*. Like so:
+To add stories in markdown just add a `[component-name].story.mdx` somewhere in `package/\*`. Like so:
 
 ```md
 import { Meta, Story, Preview, Props, Source, Description } from '@storybook/addon-docs/blocks';
@@ -64,6 +64,8 @@ This is line about this component. `Enjoy!`
 ```
 
 ### CSF(Component Story Format) Stories
+
+To add stories in markdown just add a `[component-name].story.tsx` somewhere in `package/\*`. Like so:
 
 ```typescript
 import React from 'react';
