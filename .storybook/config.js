@@ -1,11 +1,13 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
+import { withInfo } from '@storybook/addon-info';
 
 const req = require.context('../packages', true, /\.story\.(tsx|mdx)$/);
 function loadStories() {
   addDecorator(withKnobs);
-  req.keys().forEach((filename) => req(filename));
+  addDecorator(withInfo);
+  return req.keys().map((filename) => req(filename));
 }
 configure(loadStories, module);
 

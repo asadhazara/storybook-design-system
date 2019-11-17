@@ -1,25 +1,31 @@
+import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
-import React from 'react';
-
 import { Button } from './Button';
 
-storiesOf('Button', module)
-  .addParameters({ component: Button })
-  .add('default', () => <Button onClick={action('logIn clicked')}>{text('Value', 'Button')}</Button>)
-  .add('primary', () => (
-    <Button variant="primary" onClick={action('logIn clicked')}>
-      {text('Value', 'Button')}
-    </Button>
-  ))
-  .add('danger', () => (
-    <Button variant="danger" onClick={action('logIn clicked')}>
-      {text('Value', 'Button')}
-    </Button>
-  ))
-  .add('warning', () => (
-    <Button variant="warning" onClick={action('logIn clicked')}>
-      {text('Value', 'Button')}
-    </Button>
-  ));
+export default {
+  title: 'Button',
+  subtitle: 'This is a button component',
+  component: Button,
+};
+
+export const normal = (): React.ReactNode => <Button type="button">Hello</Button>;
+export const primary = (): React.ReactNode => (
+  <Button variant="primary" type="button" onClick={action('logIn clicked')}>
+    {text('Value', 'Button')}
+  </Button>
+);
+
+normal.primary = {
+  parameters: { notes: 'Dit is een knop.' },
+  info: {
+    source: true,
+  },
+};
+
+normal.story = {
+  parameters: { notes: 'Dit is een knop.' },
+  info: {
+    source: true,
+  },
+};

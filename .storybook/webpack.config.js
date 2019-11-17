@@ -9,22 +9,8 @@ const packages = readdirSync(basePath).filter((name) =>
 
 module.exports = async ({ config }) => {
   config.module.rules.push({
-    test: /\.story\.mdx$/,
-    use: [
-      {
-        loader: '@mdx-js/loader',
-        options: {
-          compilers: [createCompiler({})],
-        },
-      },
-    ],
-  });
-
-  config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    use: [
-      require.resolve('awesome-typescript-loader'),
-    ],
+    loaders: ['awesome-typescript-loader', 'react-docgen-typescript-loader'],
   });
 
   config.resolve.extensions.push('.ts', '.tsx');

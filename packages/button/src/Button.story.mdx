@@ -1,3 +1,26 @@
-# Hello Docs
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import { Button } from './';
 
-Welcome to the future of Storybook!
+<Meta title="Button/danger" component={Button} />
+
+# Credit card
+
+This component must use `inputmode="numeric"` in order to bring up the correct keyboard on mobile.
+
+<Preview>
+  <Button variant="danger" type="button">
+    Hello
+  </Button>
+  <Button variant="primary" type="button">
+    Hello
+  </Button>
+  <Button variant="warning" type="button">
+    Hello
+  </Button>
+</Preview>
+
+```javascript
+<Button variant="warning" type="button">
+  Hello
+</Button>
+```
