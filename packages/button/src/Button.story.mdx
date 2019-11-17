@@ -1,4 +1,5 @@
 import { Meta, Story, Preview, Props, Source, Description } from '@storybook/addon-docs/blocks';
+import { Source as SourceComponent, Typeset } from '@storybook/components';
 import { text } from '@storybook/addon-knobs';
 import { Button } from './';
 
@@ -39,7 +40,24 @@ This is line about this component. `Enjoy!`
 
 ---
 
-<Source dark={true} id="component-button--primary" />
+<Source dark id="component-button--primary" />
+
+---
+
+<SourceComponent
+  code={`
+<Button size="large" variant="danger" type="button">
+  Button
+</Button>
+`}
+  dark
+  language="jsx"
+  format={false}
+/>
+
+---
+
+<Typeset fontSizes={['12px', '14px', '16px', '20px', '24px', '32px', '40px', '48px']} />
 
 ---
 
