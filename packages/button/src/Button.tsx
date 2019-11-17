@@ -57,6 +57,10 @@ const StyledButton = styled.button<{ variant?: string }>`
   })}
 `;
 
+/**
+  Button Docs - a description is provided here
+  A button can have multiple attributes, such as `type`, `onClick` etc.
+**/
 const Button: FC<ButtonProps> = (props) => {
   return <StyledButton {...props} />;
 };

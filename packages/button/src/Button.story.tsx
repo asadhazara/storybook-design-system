@@ -9,7 +9,23 @@ export default {
   component: Button,
 };
 
-export const allButtons = (): React.ReactNode => <Button type="button">Hello</Button>;
+export const allButtons = (): React.ReactNode => (
+  <>
+    <Button type="button">Hello</Button>
+    &nbsp;
+    <Button type="button" variant="primary">
+      Hello
+    </Button>
+    &nbsp;
+    <Button type="button" variant="danger">
+      Hello
+    </Button>
+    &nbsp;
+    <Button type="button" variant="warning">
+      Hello
+    </Button>
+  </>
+);
 export const primary = (): React.ReactNode => (
   <Button variant="primary" type="button" onClick={action('logIn clicked')}>
     {text('Value', 'Button')}
