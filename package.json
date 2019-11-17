@@ -1,6 +1,5 @@
 {
   "name": "storybook-components-lerna",
-  "version": "0.0.0",
   "workspaces": [
     "packages/*"
   ],
@@ -21,6 +20,7 @@
     "prerelease": "yarn build",
     "release": "lerna publish",
     "bootstrap": "lerna bootstrap",
+    "version": "lerna version --conventional-commits --yes",
     "clean": "lerna clean",
     "storybook": "start-storybook -p 6006",
     "build:docs": "build-storybook --docs",
