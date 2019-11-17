@@ -26,8 +26,24 @@ export const allButtons = (): React.ReactNode => (
     </Button>
   </>
 );
+
+export const defaultButton = (): React.ReactNode => (
+  <Button type="button" onClick={action('logIn clicked')}>
+    {text('Value', 'Button')}
+  </Button>
+);
 export const primary = (): React.ReactNode => (
   <Button variant="primary" type="button" onClick={action('logIn clicked')}>
+    {text('Value', 'Button')}
+  </Button>
+);
+export const danger = (): React.ReactNode => (
+  <Button variant="danger" type="button" onClick={action('logIn clicked')}>
+    {text('Value', 'Button')}
+  </Button>
+);
+export const warning = (): React.ReactNode => (
+  <Button variant="warning" type="button" onClick={action('logIn clicked')}>
     {text('Value', 'Button')}
   </Button>
 );
@@ -49,5 +65,7 @@ allButtons.story = {
 };
 
 primary.story = {
-  parameters: { info: 'Dit is een knop.' },
+  parameters: {
+    docs: { storyDescription: '4 sizes are supported.' },
+  },
 };
