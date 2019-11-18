@@ -1,5 +1,5 @@
-import { Meta, Story, Preview, Props, Source, Description } from '@storybook/addon-docs/blocks';
-import { Source as SourceComponent, Typeset } from '@storybook/components';
+import { Meta, Story, Props, Source, Description, SourceState } from '@storybook/addon-docs/blocks';
+import { Source as SourceComponent, Preview } from '@storybook/components';
 import { text } from '@storybook/addon-knobs';
 import { Button } from './';
 
@@ -36,16 +36,20 @@ This is line about this component. `Enjoy!`
 
 ---
 
-<Props of={Button} />
-
----
-
-<Source dark id="component-button--primary" />
-
----
+#### React Code
+Copy and paste the following
 
 <SourceComponent
   code={`
+<Button sizeVariant="tiny" variant="default" type="button">
+  Button
+</Button>
+<Button variant="primary" type="button">
+  Button
+</Button>
+<Button sizeVariant="large" variant="warning" type="button">
+  Button
+</Button>
 <Button sizeVariant="large" variant="danger" type="button">
   Button
 </Button>
@@ -54,6 +58,14 @@ This is line about this component. `Enjoy!`
   language="jsx"
   format={false}
 />
+
+---
+
+<Props of={Button} />
+
+---
+
+<Source dark id="component-button--primary" />
 
 ---
 

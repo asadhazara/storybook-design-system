@@ -8,7 +8,7 @@ interface InputProps extends Pick<HTMLInputProps, 'type' | 'placeholder'> {
    * The props can be described like this aswell
    */
   sizeVariant?: 'normal' | 'large';
-  variant?: 'default';
+  variant?: 'default' | 'error' | 'success';
 }
 
 const defaultProps = {
@@ -31,6 +31,14 @@ const StyledInput = styled.input<InputProps>`
     variants: {
       default: {
         ...defaultProps,
+      },
+      error: {
+        ...defaultProps,
+        borderColor: 'red',
+      },
+      success: {
+        ...defaultProps,
+        borderColor: 'green',
       },
     },
   })}

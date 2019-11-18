@@ -12,6 +12,12 @@ export const AllFields = (): React.ReactNode => (
     <Input type="text" />
     <br />
     <br />
+    <Input variant="success" type="text" sizeVariant="large" />
+    <br />
+    <br />
     <Input type="text" sizeVariant="large" />
+    <br />
+    <br />
+    <Input variant="error" type="text" sizeVariant="large" />
   </>
 );
