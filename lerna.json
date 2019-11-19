@@ -6,7 +6,6 @@
   "command": {
     "publish": {
       "conventionalCommits": true,
-      "access": "public",
       "npmClient": "yarn",
       "allowBranch": ["master", "feature/*"]
     }
