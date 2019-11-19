@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/asadhazara/storybook-components-lerna/compare/@taxi/button@1.1.0...@taxi/button@1.1.1) (2019-11-19)
+
+**Note:** Version bump only for package @taxi/button
+
+
+
+
+
 # [1.1.0](https://github.com/asadhazara/storybook-components-lerna/compare/@taxi/button@1.0.2...@taxi/button@1.1.0) (2019-11-17)
 
 
