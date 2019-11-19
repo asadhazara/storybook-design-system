@@ -4,8 +4,7 @@
     "skipLibCheck": true,
     "declarationDir": "./dist",
     "rootDir": "./src",
-    "baseUrl": "./",
-    "noImplicitAny": true //needs to be deleted once storybook docs-gen get fixed
+    "baseUrl": "./"
   },
   "include": ["./src"]
 }
