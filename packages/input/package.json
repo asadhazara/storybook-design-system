@@ -1,6 +1,6 @@
 {
-  "name": "@taxi/input",
-  "version": "1.1.1",
+  "name": "@fictief/input",
+  "version": "1.0.0",
   "description": "Input component",
   "author": "Asad Hazara",
   "homepage": "https://github.com/asadhazara/storybook-components-lerna",
@@ -21,5 +21,6 @@
     "react": "^16.0.0",
     "styled-components": "^4.0.0",
     "styled-system": "^5.0.0"
-  }
+  },
+  "gitHead": "93ce2a024dfbe096486cd400c36793d81b2c938e"
 }
