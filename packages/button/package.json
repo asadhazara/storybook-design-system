@@ -6,6 +6,7 @@
   "homepage": "https://github.com/asadhazara/storybook-components-lerna",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "license": "MIT",
   "files": [
     "dist"
   ],
@@ -22,5 +23,5 @@
     "styled-components": "^4.0.0",
     "styled-system": "^5.0.0"
   },
-  "gitHead": "93ce2a024dfbe096486cd400c36793d81b2c938e"
+  "gitHead": "fb15306f59d405837af0eece49f62724f930c79f"
 }
